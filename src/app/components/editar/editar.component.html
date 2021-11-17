@@ -1,0 +1,12 @@
+<h1>Editar</h1>
+<a class="btn btn-success" [routerLink]="['/']">Volver</a><br/><br>
+<hr>
+<form #updateForm="ngForm">
+    <input type="hidden" #cajanumero name="cajanumero" value="{{departamento.numero}}"/>
+    <label>Nombre: </label>
+    <input type="text" name="cajanombre" #cajanombre class="form-control" value="{{departamento.nombre}}"/><br/>
+    <label>Localidad: </label>
+    <input type="text" name="cajalocalidad" #cajalocalidad class="form-control" value="{{departamento.localidad}}"/><br/>
+    <button (click)="modificar()">Modificar</button>
+</form>
+<hr>
