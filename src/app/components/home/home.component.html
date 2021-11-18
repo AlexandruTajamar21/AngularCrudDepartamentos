@@ -14,6 +14,7 @@
                 </th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody *ngIf="departamentos">
@@ -21,8 +22,10 @@
                 <td>{{dept.numero}}</td>
                 <td>{{dept.nombre}}</td>
                 <td>{{dept.localidad}}</td>
-                <td><a class="btn btn-info" [routerLink]="['/editar/' + dept.numero + '/' + dept.nombre + '/' + dept.localidad]">Modificar</a></td>
-                <td><a class="btn btn-info" (click)="eliminar(dept.numero)">Eliminar</a></td>
+                <td style="width: 10%;"><a class="btn btn-info" [routerLink]="['/editar/' + dept.numero + '/' + dept.nombre + '/' + dept.localidad]">Modificar</a></td>
+                <td style="width: 10%"><a class="btn btn-info" (click)="eliminar(dept.numero)">Eliminar</a></td>
+                <td style="width: 10%"><a [routerLink]="['/empleados',dept.numero]"
+                    class="btn btn-outline-info">Empleados</a></td>
             </tr>
         </tbody>
     </table>

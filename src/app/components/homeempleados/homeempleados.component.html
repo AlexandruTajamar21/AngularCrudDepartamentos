@@ -1,0 +1,34 @@
+<!-- <h1>Home Departamentos</h1>
+<div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>
+                    idEmpleado
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Oficio
+                </th>
+                <th> Salario</th>
+                <th> Director</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngIf="empleados">
+            <tr *ngFor="let emp of empleados">
+                <td>{{emp.idEmpleado}}</td>
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.oficio}}</td>
+                <td>{{emp.salario}}</td>
+                <td>{{emp.director}}</td>
+                <td><a class="btn btn-info" [routerLink]="['/editar/' + dept.numero + '/' + dept.nombre + '/' + dept.localidad]">Modificar</a></td>
+                <td><a class="btn btn-info" (click)="eliminar(dept.numero)">Eliminar</a></td>
+                <td><a [routerLink]="['/empleados',dept.numero]"
+                    class="btn btn-outline-info">Empleados</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->

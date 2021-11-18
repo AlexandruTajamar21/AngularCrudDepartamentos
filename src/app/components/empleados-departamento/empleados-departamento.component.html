@@ -1,0 +1,30 @@
+<div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>
+                    idEmpleado
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Oficio
+                </th>
+                <th> Salario</th>
+                <th> Director</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngIf="empleados">
+            <tr *ngFor="let emp of empleados">
+                <td >{{emp.idEmpleado}}</td>
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.oficio}}</td>
+                <td>{{emp.salario}}</td>
+                <td>{{emp.departamento}}</td>
+                <td><a [routerLink]="['/incrementarsalario',emp.idEmpleado]" class="btn btn-info">IncrementarSalario</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

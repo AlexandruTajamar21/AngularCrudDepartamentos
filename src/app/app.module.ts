@@ -10,6 +10,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ServiceDepartamentos } from './Services/departamento.service';
 import { InsertarComponent } from './components/insertar/insertar.component';
 import { EditarComponent } from './components/editar/editar.component';
+import { HomeempleadosComponent } from './components/homeempleados/homeempleados.component';
+import { ServiceEmpleados } from './Services/empleado.service';
+import { EmpleadosDepartamentoComponent } from './components/empleados-departamento/empleados-departamento.component';
+import { IncrementarSalarioComponent } from './components/incrementar-salario/incrementar-salario.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,15 @@ import { EditarComponent } from './components/editar/editar.component';
     MenuComponent,
     HomeComponent,
     InsertarComponent,
-    EditarComponent
+    EditarComponent,
+    HomeempleadosComponent,
+    EmpleadosDepartamentoComponent,
+    IncrementarSalarioComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule,routing
   ],
-  providers: [appRoutingProviders,ServiceDepartamentos],
+  providers: [appRoutingProviders,ServiceDepartamentos,ServiceEmpleados],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
