@@ -14,7 +14,7 @@ export class IncrementarSalarioComponent implements OnInit {
 
   public empleado!: Empleado;
 
-  constructor(private _service:ServiceEmpleados, private _route:ActivatedRoute, private _router:Router) { }
+  constructor(private _service:ServiceEmpleados, private _route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.cargaEmpleado();

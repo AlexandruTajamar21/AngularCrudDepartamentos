@@ -16,8 +16,6 @@ export class InsertarComponent implements OnInit {
 
   constructor(private _router: Router,
     private _service: ServiceDepartamentos,) {
-
-    
   }
 
   ngOnInit(): void {
